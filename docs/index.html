@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sloth Sort — a local, open-weight file tidier</title>
+<meta name="description" content="A lazy, local, open-source AI file tidier. 397 MB open-weight model, zero dollars, total privacy.">
+<style>
+  :root{
+    --bg:#0f1410; --panel:#18211a; --panel2:#101711; --ink:#e7efe4; --dim:#a9bba4;
+    --accent:#8fce6e; --accent2:#d8b84a; --line:#26352a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px}
+  header{padding:56px 0 18px}
+  .eyebrow{color:var(--accent);letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;font-weight:700}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:.35em 0 .3em}
+  h1 em{color:var(--accent);font-style:normal}
+  .sub{color:var(--dim);font-size:18px;max-width:44em}
+  .hero{margin:26px 0 8px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .hero img{width:100%;display:block}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+  .badges li{border:1px solid var(--line);background:var(--panel);border-radius:999px;
+    padding:5px 13px;font-size:13px;color:var(--dim)}
+  .badges b{color:var(--accent);font-weight:700}
+  section{margin:44px 0}
+  h2{font-size:24px;margin:0 0 12px}
+  h2 .dot{color:var(--accent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card h3{margin:0 0 6px;font-size:16.5px}
+  .card p{margin:0;color:var(--dim);font-size:14.5px}
+  pre{background:var(--panel2);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;overflow:auto;font:13.5px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#cfe3c8}
+  .arrow{color:var(--accent)} .dim{color:#6f8468}
+  .num{color:var(--accent2)}
+  audio{width:100%;margin-top:10px}
+  .cmd{display:flex;align-items:center;gap:10px;background:var(--panel2);
+    border:1px solid var(--line);border-radius:10px;padding:11px 16px;margin:10px 0;
+    font:14px ui-monospace,Menlo,Consolas,monospace;overflow:auto}
+  .cmd .sloth{color:var(--accent)}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:680px){.cols{grid-template-columns:1fr}}
+  footer{border-top:1px solid var(--line);margin-top:50px;padding:26px 0 40px;color:var(--dim);font-size:14px}
+  a{color:var(--accent)}
+  .pill{display:inline-block;background:#20301f;color:var(--accent2);border:1px solid #39492b;
+    border-radius:8px;padding:2px 9px;font-size:12.5px;font-weight:600;vertical-align:middle}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Open-source AI · runs entirely on your machine</div>
+  <h1>🦥 Sloth Sort — the file tidier that works <em>while you do literally anything else</em></h1>
+  <p class="sub">A lazy little agent with an open-weight brain. It reads your messiest folder, asks a
+     397&nbsp;MB local model where each file belongs, and files everything in small shifts
+     — napping in between. No cloud. No subscription. No deletions. Ever.</p>
+  <ul class="badges">
+    <li>Model: <b>Qwen2.5-0.5B</b> · Apache-2.0</li>
+    <li>Served by <b>Ollama</b> · MIT</li>
+    <li><b>~450 LOC</b> Python · MIT</li>
+    <li>Runs on <b>2 CPU cores</b>, no GPU</li>
+    <li>Cost per run: <b>$0.00</b></li>
+    <li>Internet needed: <b>never</b></li>
+  </ul>
+</header>
+
+<figure class="hero"><img src="hero.png" alt="A sloth calmly organizing files into folders, flat illustration"></figure>
+
+<section>
+  <h2><span class="dot">●</span> What effort does it save?</h2>
+  <p>Manual triage of a month-old Downloads folder is 15–25 minutes of pure tedium:
+     open, skim, decide, drag, rename. Sloth Sort does a 24-file folder in about
+     <span class="num">65 seconds</span> — then keeps doing it at 2am every night on a cron
+     job you set up once and never think of again.</p>
+
+  <p class="dim">Before:</p>
+  <pre>1password-backup-2019.txt     invoice_INV-2204_final_FINAL (2).pdf
+Screenshot 2025-10-02 .png    rental_agreement_signed.pdf
+api_keys_OLD_ROTATED.json     tax_summary_2024.pdf   tmp9F31.tmp …</pre>
+
+  <p class="dim">After <span class="cmd" style="display:inline-flex;padding:4px 10px;margin:0"><span class="sloth">$</span> python3 sloth_sort.py apply ~/Downloads --pace 8</span></p>
+  <pre>Finance/<span class="dim">receipts · statements · tax summary</span>
+Documents/<span class="dim">lease · letters · that recipe</span>     Notes/<span class="dim">todo · lecture · standup</span>
+Photos/  Screenshots/  Code/  Software/
+_archive/<span class="dim">stale password export · rotated API keys · tmp junk</span></pre>
+</section>
+
+<section>
+  <h2><span class="dot">●</span> Where it came from</h2>
+  <p>Built in one session for the DEV <em>Hacktoberfest Open-Source AI Challenge — Week 3: “Slow and
+     Steady”</em>. The demo folder above was generated, sorted, un-sorted (<code>undo</code>), and re-sorted
+     live in a tiny 2-core sandbox; unedited logs ship in <code>demo/*.log</code>.</p>
+  <div class="card">
+    <h3>🎧 75-second narrated walkthrough</h3>
+    <audio controls preload="none" src="sloth-sort-audio.mp3"></audio>
+  </div>
+</section>
+
+<section>
+  <h2><span class="dot">●</span> Why open — here, specifically <span class="pill">the whole point</span></h2>
+  <div class="grid">
+    <div class="card"><h3>🔒 Privacy is physics</h3><p>The folder held a tax summary and a password export. Local inference means they can’t “leak” — nothing ever leaves the machine.</p></div>
+    <div class="card"><h3>✈️ Works offline, forever</h3><p>After one 397&nbsp;MB download, it sorts on planes, in blackouts, anywhere. Hygiene shouldn’t depend on signal bars.</p></div>
+    <div class="card"><h3>🪙 $0, constitutionally</h3><p>Nightly, on every machine you own: still free. Idle CPUs you already have, not tokens you rent.</p></div>
+    <div class="card"><h3>🧠 Swappable brain</h3><p>One flag to trade up to a bigger model — or fine-tune the small one on <em>your</em> definition of tidy. No vendor roadmap.</p></div>
+    <div class="card"><h3>🔍 Auditable</h3><p>The entire decision loop — prompt, categories, fallbacks — is ~450 lines you can read in one sitting.</p></div>
+    <div class="card"><h3>🦥 Honest pace</h3><p>~2.5&nbsp;s per file on 2 cores. Slow, steady, reproducible (<code>temperature=0</code>, pinned local weights).</p></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="dot">●</span> Try it in two minutes</h2>
+  <div class="cmd"><span class="sloth">$</span><span>ollama pull qwen2.5:0.5b-instruct <span class="dim"># one-time, ~400 MB</span></span></div>
+  <div class="cmd"><span class="sloth">$</span><span>python3 sloth_sort.py scan ~/Downloads --pace 10 <span class="dim"># dry run — always first</span></span></div>
+  <div class="cmd"><span class="sloth">$</span><span>python3 sloth_sort.py apply ~/Downloads --pace 8 --siesta 2</span></div>
+  <div class="cmd"><span class="sloth">$</span><span>python3 sloth_sort.py undo ~/Downloads <span class="dim"># regret insurance</span></span></div>
+  <p>Night shift, the truly lazy way: <code>0 2 * * * cd ~/sloth-sort &amp;&amp; python3 sloth_sort.py apply "$HOME/Downloads" --pace 8 --siesta 2</code></p>
+</section>
+
+<footer>
+  🦥 Built slowly, on purpose. Code: MIT · Model: Qwen2.5 (Apache-2.0) · Runtime: Ollama (MIT).<br>
+  Submission for the DEV Hacktoberfest Open-Source AI Challenge, Week 3 — “Slow and Steady”.
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+🦥 Sloth Sort — dry run on /home/user/sloth-sort/demo/messy_downloads (model: qwen2.5:0.5b-instruct)
+  1password-backup-2019.txt                  → _archive/1password-backup-2019.txt
+      ↳ [model] stale password export, archive safely
+  IMG_8102.PNG                               → Photos/img-8102.png
+      ↳ [model] camera photo, classify by filename
+  IMG_8144.PNG                               → Photos/img-8144.png
+      ↳ [model] camera photo, classify by filename
+  PXL_20250914_181204.jpg                    → Photos/pxl-20250914-181204.jpg
+      ↳ [model] photo of a calendar with a date and time stamp
+  Screen Recording 2025-09-28.mp4            → Notes/screen-recording-2025-09-28.mp4
+      ↳ [model] recording of a screen session, not finance, documents, notes, or junk
+  Screenshot 2025-10-02 at 18.41.22.png      → Screenshots/screenshot-2025-10-02-at-18-41-22.png
+      ↳ [model] temporary file
+  Untitled document (7).txt                  → Notes/untitled-document-7.txt
+      ↳ [model] text file, not classified as finance, documents, notes, or junk
+  api_keys_OLD_ROTATED.json                  → _archive/api-keys-old-rotated.json
+      ↳ [model] old credentials export, archive safely
+  bank_statement_sept.csv                    → Finance/bank-statement-sept.csv
+      ↳ [model] bank statement with multiple transactions
+  cat_meme_FINAL.jpg                         → Photos/cat-meme-final.jpg
+      ↳ [model] meme image, classify by filename
+  data_pipeline.py                           → Code/data-pipeline.py
+      ↳ [model] code file, classify by filename
+  gerbil-dynamo-plugin.dmg                   → Software/gerbil-dynamo-plugin.dmg
+      ↳ [model] archive by file type
+  invoice_INV-2204_final_FINAL (2).pdf       → Finance/invoice-inv-2204-final-final-2.pdf
+      ↳ [model] invoice file, classified by filename
+  jollof recipe grandma.md                   → Documents/jollof-recipe-grandma.md
+      ↳ [model] recipe notes
+  lecture w4 notes.txt                       → Notes/lecture-w4-notes.txt
+      ↳ [model] lecture notes
+  letter to landlord.docx                    → Documents/letter-to-landlord.docx
+      ↳ [model] tenancy agreement, not finance
+  meeting notes monday.txt                   → Notes/meeting-notes-monday.txt
+      ↳ [model] notes related to a meeting
+  receipt_oct_ark_cafe.pdf                   → Finance/ark-cafe-october-receipt.pdf
+      ↳ [model] This file is a receipt for a cafe, which falls under the Finance category.
+  rental_agreement_signed.pdf                → Documents/rental-agreement-signed.pdf
+      ↳ [model] rental agreement signed, not finance
+  tax_summary_2024.pdf                       → Finance/tax-summary-2024.pdf
+      ↳ [model] personal income tax summary, not finance
+  tmp9F31.tmp                                → _archive/tmp9f31.tmp
+      ↳ [model] temporary file
+  todo list.txt                              → Notes/todo-list.txt
+      ↳ [model] personal notes
+  tsdump_error_20251009.log                  → Finance/tsdump-error-20251009.log
+      ↳ [model] temp file, archive by category
+
+🦥 DRY RUN — nothing moved. Rerun with: apply

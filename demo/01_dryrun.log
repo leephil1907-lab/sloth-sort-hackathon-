@@ -1,0 +1,49 @@
+🦥 Sloth Sort — dry run on /home/user/sloth-sort/demo/messy_downloads (model: qwen2.5:0.5b-instruct)
+  1password-backup-2019.txt                  → _archive/1password-backup-2019.txt
+      ↳ [model] old credentials export, archive safely
+  IMG_8102.PNG                               → Photos/img-8102.png
+      ↳ [model] camera photo, classify by filename
+  IMG_8144.PNG                               → Photos/img-8144.png
+      ↳ [model] camera photo, classify by filename
+  PXL_20250914_181204.jpg                    → Photos/pxl-20250914-181204.jpg
+      ↳ [model] photo from 2025-09-14, 18:12:04, 48 KB, 143 KB, 143 KB
+  Screen Recording 2025-09-28.mp4            → Screenshots/screen-recording-2025-09-28.mp4
+      ↳ [model] video recording, classify by filename
+  Screenshot 2025-10-02 at 18.41.22.png      → Screenshots/screenshot-2025-10-02-at-18-41-22.png
+      ↳ [model] recent screenshot, classify by filename
+  Untitled document (7).txt                  → Documents/untitled-document-7.txt
+      ↳ [model] text file, classify by filename
+  api_keys_OLD_ROTATED.json                  → Code/api-keys-old-rotated.json
+      ↳ [model] old credentials export, archive safely
+  bank_statement_sept.csv                    → Finance/bank-statement-sept.csv
+      ↳ [model] bank statement with multiple transactions
+  cat_meme_FINAL.jpg                         → Photos/cat-meme-final.jpg
+      ↳ [model] meme image, classify by filename
+  data_pipeline.py                           → Code/data-pipeline.py
+      ↳ [model] code file, classify by filename
+  gerbil-dynamo-plugin.dmg                   → Software/gerbil-dynamo-plugin.dmg
+      ↳ [model] dmg file for a software application
+  invoice_INV-2204_final_FINAL (2).pdf       → Finance/invoice-2204-final-final.pdf
+      ↳ [model] financial invoice, contains details of a bill and renewal plan
+  jollof recipe grandma.md                   → Documents/jollof-recipe-grandma.md
+      ↳ [model] recipe for jollof rice, classify by filename
+  lecture w4 notes.txt                       → Notes/lecture-w4-notes.txt
+      ↳ [model] notes on econ 201 week 4, inelastic goods, cross-price elasticity
+  letter to landlord.docx                    → Documents/letter-to-landlord.docx
+      ↳ [model] documents, correspondence, lease agreement
+  meeting notes monday.txt                   → Notes/meeting-notes-monday.txt
+      ↳ [model] personal notes
+  receipt_oct_ark_cafe.pdf                   → Finance/ark-cafe-oct-12-2025-receipt.pdf
+      ↳ [model] cafe receipt, contains financial information
+  rental_agreement_signed.pdf                → Finance/rental-agreement-signed.pdf
+      ↳ [model] rental agreement, classify by filename
+  tax_summary_2024.pdf                       → Finance/tax-summary-2024.pdf
+      ↳ [model] personal income tax summary
+  tmp9F31.tmp                                → _archive/tmp9f31.tmp
+      ↳ [model] temporary file
+  todo list.txt                              → Notes/todo-list.txt
+      ↳ [model] planning notes
+  tsdump_error_20251009.log                  → Finance/tsdump-error-20251009.log
+      ↳ [model] temp file, archive safely
+
+🦥 DRY RUN — nothing moved. Rerun with: apply
