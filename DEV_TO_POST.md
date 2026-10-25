@@ -111,7 +111,7 @@ shutil.move(src, dst)                                     # only after dry-run a
 log_manifest_line(run_id, src, dst)                       # makes `undo` possible
 ```
 
-<!-- Once you push the repo, embed it here with: {% github YOURUSER/sloth-sort %} -->
+{% github leephil1907-lab/sloth-sort-hackathon- %}
 
 Everything else — mess generator, README, logs, hero image, narration — is in the repo:
 
